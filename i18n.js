@@ -8,6 +8,10 @@ const T = {
   bmi: { zh: 'BMI计算器', en: 'BMI' },
   unit: { zh: '单位换算', en: 'Unit' },
   countdown: { zh: '倒计时', en: 'Countdown' },
+  pdf: { zh: 'PDF工具', en: 'PDF Tools' },          // ✅ 新增：PDF工具导航翻译
+  // 如果你以后想加“购物推荐”，可以在这里加一行：
+  // shop: { zh: '购物推荐', en: 'Shopping' },
+
   calculate: { zh: '计算', en: 'Calculate' },
   reset: { zh: '重置', en: 'Reset' },
   donateTip: { zh: '☕ 觉得好用？打赏一杯咖啡', en: '☕ Find it useful? Buy me a coffee' },
@@ -122,8 +126,15 @@ document.addEventListener('DOMContentLoaded', () => setLang(lang));
 /* Shared: header HTML generator */
 function renderHeader(active) {
   const nav = [
-    ['index.html', 'home'], ['mortgage.html', 'mortgage'], ['tax.html', 'tax'],
-    ['bmi.html', 'bmi'], ['unit.html', 'unit'], ['countdown.html', 'countdown']
+    ['index.html', 'home'],
+    ['mortgage.html', 'mortgage'],
+    ['tax.html', 'tax'],
+    ['bmi.html', 'bmi'],
+    ['unit.html', 'unit'],
+    ['countdown.html', 'countdown'],
+    ['https://pdfcraft-oxjy.onrender.com/zh/', 'pdf']   // ✅ 新增：PDF工具导航（外部链接）
+    // 如果你要加“购物推荐”，可以在这里加一行：
+    // ['https://你的淘宝客链接', 'shop']
   ];
   return `<header class="header"><div class="header-inner">
     <a href="index.html" class="logo">⚡ <span data-t="siteName">CalcSmart</span></a>
